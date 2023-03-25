@@ -1,0 +1,34 @@
+{
+    "name": "miposent/script",
+    "description": "this is miposent script",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Miposent\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "miposent",
+            "email": "zhuanchaben@qq.com"
+        }
+    ],
+    "scripts": {
+        "test": [
+            "@php -version"
+        ],
+        "pre-install-cmd": [
+            "Miposent\\Script\\Install::pre"
+        ],
+        "post-create-project-cmd": [
+             "Miposent\\Script\\Install::create"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Run all tests!"
+    },
+    "require": {
+        "composer": "*",
+        "composer/composer": "^2.4"
+    }
+}
